@@ -4,7 +4,10 @@ jQuery(document).ready(function($){
 	$('.form').submit(function(event) {
 		var form = $(this);
 		var data = form.serialize();
-		var resultBox = $(this).find('.form-message_js');
+
+		// console.log(data);
+
+		var resultBox = $(this).find('.form-message--js');
 
 		form.addClass('loading');
 

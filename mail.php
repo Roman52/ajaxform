@@ -1,16 +1,15 @@
-<?php 
-$to = "test@test.ru";
+<?php
+// echo '<pre>';
+// print_r($_POST);
+// echo '</pre>';
 
 $name = trim($_POST["name"]);
 $phone = trim($_POST["phone"]);
 $label = trim($_POST["label"]);
 $message = "Имя: $name\r\nТелефон: $phone\r\nФорма: $label";
 
+$to = "test@test.ru";
 $title = "Новая заявка";
-
-// echo '<pre>';
-// print_r($_POST);
-// echo '</pre>';
 
 $res = '';
 $error = false;

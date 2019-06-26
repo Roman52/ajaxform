@@ -19,7 +19,7 @@
 }
 
 .form__box {
-  margin-bottom: 15px;
+ 	margin-bottom: 15px;
 }
 
 .form__box--tac {
@@ -38,5 +38,5 @@
 }
 
 .form__field_error {
-  border-color: #c30000;
+ 	border-color: #c30000;
 }
