@@ -6,6 +6,7 @@
 $name = trim($_POST["name"]);
 $phone = trim($_POST["phone"]);
 $label = trim($_POST["label"]);
+
 $message = "Имя: $name\r\nТелефон: $phone\r\nФорма: $label";
 
 $to = "test@test.ru";
@@ -15,17 +16,17 @@ $res = '';
 $error = false;
 
 if ( empty($name) ) {
-	$res .= '<div class="form-error form-error_name">Поле имя - не заполено</div>';
+	$res .= '<div class="form-error form-error--name">Поле имя - не заполено</div>';
 	$error = true;
 }
 
 if ( empty($phone) ) {
-	$res .= '<div class="form-error form-error_phone">Поле телефон - не заполено</div>';
+	$res .= '<div class="form-error form-error--phone">Поле телефон - не заполено</div>';
 	$error = true;
 } else {
 	$pattern = '/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/';
 	if ( ! preg_match($pattern, $phone) ) {
-		$res .= '<div class="form-error form-error_phone">Поле телефон - не соответствует формату</div>';
+		$res .= '<div class="form-error form-error--phone">Поле телефон - не соответствует формату</div>';
 		$error = true;
 	}
 }
